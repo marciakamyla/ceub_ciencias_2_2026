@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeliBeleza | Salão de Alto Padrão</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            light: '#F4E4BC',
+                            DEFAULT: '#D4AF37',
+                            dark: '#AA8C2C',
+                        },
+                        roseGold: {
+                            DEFAULT: '#B76E79',
+                            light: '#E0BFB8'
+                        },
+                        darkNeutral: '#1F1F1F',
+                        offWhite: '#FAFAF7'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-offWhite text-darkNeutral font-sans antialiased selection:bg-gold selection:text-white">
+
+    <!-- 1. Cabeçalho (Header / Navbar) -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-offWhite/90 backdrop-blur-md border-b border-gold/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="font-serif text-2xl sm:text-3xl font-bold tracking-wider text-darkNeutral flex items-center gap-2">
+                Beli<span class="text-gold">Beleza</span>
+            </a>
+
+            <!-- Navegação Desktop -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm tracking-wide">
+                <a href="#servicos" class="hover:text-gold transition-colors">Serviços</a>
+                <a href="#sobre" class="hover:text-gold transition-colors">Sobre</a>
+                <a href="#diferenciais" class="hover:text-gold transition-colors">Diferenciais</a>
+                <a href="#depoimentos" class="hover:text-gold transition-colors">Depoimentos</a>
+                <a href="#contato" class="hover:text-gold transition-colors">Contato</a>
+            </nav>
+
+            <!-- Botão de Ação -->
+            <div class="hidden md:block">
+                <a href="https://wa.me/" target="_blank" class="bg-darkNeutral hover:bg-gold text-offWhite hover:text-darkNeutral px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 shadow-sm flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Agendar Horário
+                </a>
+            </div>
+
+            <!-- Botão Menu Mobile -->
+            <button id="menu-btn" class="md:hidden text-darkNeutral focus:outline-none text-xl p-2">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-offWhite border-b border-gold/20 shadow-lg py-6 px-6 flex flex-col gap-4 text-center">
+            <a href="#servicos" class="mobile-link text-lg hover:text-gold transition-colors">Serviços</a>
+            <a href="#sobre" class="mobile-link text-lg hover:text-gold transition-colors">Sobre</a>
+            <a href="#diferenciais" class="mobile-link text-lg hover:text-gold transition-colors">Diferenciais</a>
+            <a href="#depoimentos" class="mobile-link text-lg hover:text-gold transition-colors">Depoimentos</a>
+            <a href="#contato" class="mobile-link text-lg hover:text-gold transition-colors">Contato</a>
+            <a href="https://wa.me/" target="_blank" class="bg-darkNeutral text-offWhite py-3 rounded-full font-medium flex items-center justify-center gap-2 mt-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Agendar Horário
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. Seção Principal (Hero Section) -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 bg-gradient-to-br from-offWhite via-gold-light/20 to-roseGold/15 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Texto Hero -->
+            <div class="text-center lg:text-left space-y-6">
+                <span class="inline-block text-gold-dark font-semibold tracking-widest uppercase text-xs sm:text-sm bg-gold/10 px-4 py-1.5 rounded-full border border-gold/30">
+                    Experiência Exclusiva de Beleza
+                </span>
+                <h1 class="font-serif text-4xl sm:text-6xl font-bold tracking-tight leading-tight text-darkNeutral">
+                    Revele sua <span class="italic text-roseGold font-normal">melhor versão</span> com sofisticação.
+                </h1>
+                <p class="text-base sm:text-lg text-darkNeutral/80 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                    Um santuário dedicado ao seu bem-estar e estética de alto padrão. Cuidamos de cada detalhe para realçar a sua essência natural em um ambiente acolhedor.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="https://wa.me/" target="_blank" class="w-full sm:w-auto bg-darkNeutral hover:bg-gold text-offWhite hover:text-darkNeutral px-8 py-4 rounded-full font-medium transition-all duration-300 shadow-md flex items-center justify-center gap-3 text-base">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Agendar pelo WhatsApp
+                    </a>
+                    <a href="#servicos" class="w-full sm:w-auto border border-darkNeutral/30 hover:border-gold hover:text-gold px-8 py-4 rounded-full font-medium transition-all duration-300 text-center">
+                        Conhecer Serviços
+                    </a>
+                </div>
+            </div>
+
+            <!-- Imagem Hero / Carrossel Visual -->
+            <div class="relative flex justify-center">
+                <div class="relative w-full max-w-md h-[450px] sm:h-[520px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800" alt="Salão BeliBeleza Interior" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkNeutral/60 via-transparent to-transparent flex items-end p-6">
+                        <div class="text-white">
+                            <p class="font-serif text-xl font-medium">Ambiente Luxuoso & Acolhedor</p>
+                            <p class="text-xs text-gold-light tracking-wide uppercase mt-1">Sua pausa merecida para o autocuidado</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Badge Flutuante Decorativo -->
+                <div class="absolute -bottom-6 -left-4 sm:left-4 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-gold/20 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 font-medium">Avaliação dos Clientes</p>
+                        <p class="text-sm font-bold text-darkNeutral">4.9 / 5.0 (Mais de 500 avaliações)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Seção de Serviços -->
+    <section id="servicos" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-gold font-semibold uppercase tracking-widest text-xs">Nossos Tratamentos</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold">Serviços Exclusivos para Você</h2>
+                <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+                <p class="text-darkNeutral/70">Técnicas avançadas e produtos de altíssima qualidade para cuidar de cada detalhe da sua beleza.</p>
+            </div>
+
+            <!-- Grid de Serviços -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group bg-offWhite rounded-2xl overflow-hidden border border-gold/10 hover:border-gold/50 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600" alt="Cabelo e Coloração" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full text-gold-dark">Cabelos</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-serif text-xl font-bold text-darkNeutral">Cabelo & Coloração</h3>
+                            <p class="text-sm text-darkNeutral/70 font-light leading-relaxed">Cortes modernos, mechas personalizadas, tratamentos reconstrutores e coloração de alto padrão.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/" target="_blank" class="w-full block text-center bg-transparent border border-darkNeutral/20 group-hover:bg-darkNeutral group-hover:text-offWhite py-2.5 rounded-xl font-medium text-sm transition-all duration-300">
+                            Saiba mais / Agendar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-offWhite rounded-2xl overflow-hidden border border-gold/10 hover:border-gold/50 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1632345031435-8727f6c97d34?auto=format&fit=crop&q=80&w=600" alt="Manicure e Pedicure" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full text-roseGold">Unhas</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-serif text-xl font-bold text-darkNeutral">Manicure & Pedicure</h3>
+                            <p class="text-sm text-darkNeutral/70 font-light leading-relaxed">Cuidados completos para mãos e pés com esterilização rigorosa, esmaltação impecável e blindagem.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/" target="_blank" class="w-full block text-center bg-transparent border border-darkNeutral/20 group-hover:bg-darkNeutral group-hover:text-offWhite py-2.5 rounded-xl font-medium text-sm transition-all duration-300">
+                            Saiba mais / Agendar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-offWhite rounded-2xl overflow-hidden border border-gold/10 hover:border-gold/50 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=600" alt="Estética Facial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full text-gold-dark">Estética</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-serif text-xl font-bold text-darkNeutral">Estética Facial</h3>
+                            <p class="text-sm text-darkNeutral/70 font-light leading-relaxed">Limpeza de pele profunda, revitalização, hidratação e protocolos faciais rejuvenescedores avançados.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/" target="_blank" class="w-full block text-center bg-transparent border border-darkNeutral/20 group-hover:bg-darkNeutral group-hover:text-offWhite py-2.5 rounded-xl font-medium text-sm transition-all duration-300">
+                            Saiba mais / Agendar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-offWhite rounded-2xl overflow-hidden border border-gold/10 hover:border-gold/50 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1512290900722-9a707b82b9db?auto=format&fit=crop&q=80&w=600" alt="Design de Sobrancelhas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full text-roseGold">Olhar</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-serif text-xl font-bold text-darkNeutral">Design de Sobrancelhas</h3>
+                            <p class="text-sm text-darkNeutral/70 font-light leading-relaxed">Harmonização do olhar com design personalizado, micropigmentação e lash lifting de alta durabilidade.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/" target="_blank" class="w-full block text-center bg-transparent border border-darkNeutral/20 group-hover:bg-darkNeutral group-hover:text-offWhite py-2.5 rounded-xl font-medium text-sm transition-all duration-300">
+                            Saiba mais / Agendar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="group bg-offWhite rounded-2xl overflow-hidden border border-gold/10 hover:border-gold/50 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=600" alt="Maquiagem Profissional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full text-gold-dark">Make</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="font-serif text-xl font-bold text-darkNeutral">Maquiagem Profissional</h3>
+                            <p class="text-sm text-darkNeutral/70 font-light leading-relaxed">Produções sofisticadas para eventos, festas, casamentos e ocasiões especiais que exigem alta durabilidade.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/" target="_blank" class="w-full block text-center bg-transparent border border-darkNeutral/20 group-hover:bg-darkNeutral group-hover:text-offWhite py-2.5 rounded-xl font-medium text-sm transition-all duration-300">
+                            Saiba mais / Agendar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 6 (CTA Especial) -->
+                <div class="bg-gradient-to-br from-darkNeutral to-darkNeutral/90 text-offWhite rounded-2xl p-8 flex flex-col justify-between shadow-xl">
+                    <div class="space-y-4">
+                        <span class="text-gold font-semibold uppercase tracking-widest text-xs">Atendimento VIP</span>
+                        <h3 class="font-serif text-2xl font-bold">Dia de Noiva & Eventos</h3>
+                        <p class="text-sm text-offWhite/80 font-light leading-relaxed">Pacotes exclusivos e personalizados para o seu grande dia, garantindo tranquilidade e impecabilidade.</p>
+                    </div>
+                    <div class="pt-6">
+                        <a href="https://wa.me/" target="_blank" class="w-full block text-center bg-gold hover:bg-gold-light text-darkNeutral py-3 rounded-xl font-semibold text-sm transition-all duration-300 shadow-md">
+                            Consultar Pacotes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre (Sobre Nós) -->
+    <section id="sobre" class="py-24 bg-offWhite border-y border-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-gold font-semibold uppercase tracking-widest text-xs">Nossa História</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold">Paixão por realçar o que há de mais belo em você</h2>
+                <p class="text-darkNeutral/80 leading-relaxed font-light">
+                    Fundado com o propósito de transformar o conceito de salão de beleza em uma verdadeira experiência de luxo e autocuidado, o <strong class="font-medium text-darkNeutral">BeliBeleza</strong> reúne os melhores profissionais do mercado em um espaço sofisticado, aconchegante e pensado exclusivamente para o seu bem-estar.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4">
+                    <div class="border-l-2 border-gold pl-4">
+                        <p class="font-serif text-3xl font-bold text-darkNeutral">+10</p>
+                        <p class="text-xs text-darkNeutral/70 uppercase tracking-wide mt-1">Anos de Excelência</p>
+                    </div>
+                    <div class="border-l-2 border-gold pl-4">
+                        <p class="font-serif text-3xl font-bold text-darkNeutral">+5.000</p>
+                        <p class="text-xs text-darkNeutral/70 uppercase tracking-wide mt-1">Clientes Satisfeitas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=500" alt="Profissional trabalhando" class="rounded-2xl shadow-md w-full h-64 object-cover">
+                <img src="https://images.unsplash.com/photo-1595476108010-b9d1f67f10b5?auto=format&fit=crop&q=80&w=500" alt="Ambiente do salão" class="rounded-2xl shadow-md w-full h-64 object-cover mt-8">
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Seção "Por que nos escolher?" (Diferenciais) -->
+    <section id="diferenciais" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-gold font-semibold uppercase tracking-widest text-xs">Nossos Pilares</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold">Por que escolher o BeliBeleza?</h2>
+                <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pilar 1 -->
+                <div class="bg-offWhite p-8 rounded-2xl border border-gold/10 text-center space-y-4 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gold/10 text-gold rounded-full flex items-center justify-center mx-auto text-2xl">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold">Profissionais Renomados</h3>
+                    <p class="text-darkNeutral/70 text-sm font-light leading-relaxed">
+                        Nossa equipe passa por constantes capacitações e atualizações nas principais tendências mundiais de estilo e estética.
+                    </p>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="bg-offWhite p-8 rounded-2xl border border-gold/10 text-center space-y-4 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gold/10 text-gold rounded-full flex items-center justify-center mx-auto text-2xl">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold">Produtos de Alta Qualidade</h3>
+                    <p class="text-darkNeutral/70 text-sm font-light leading-relaxed">
+                        Trabalhamos exclusivamente com as marcas globais mais prestigiadas do mercado de luxo capilar e dermatológico.
+                    </p>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="bg-offWhite p-8 rounded-2xl border border-gold/10 text-center space-y-4 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-gold/10 text-gold rounded-full flex items-center justify-center mx-auto text-2xl">
+                        <i class="fa-solid fa-spa"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold">Ambiente Exclusivo</h3>
+                    <p class="text-darkNeutral/70 text-sm font-light leading-relaxed">
+                        Um espaço planejado para proporcionar relaxamento profundo, privacidade e uma experiência sensorial única.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Depoimentos de Clientes -->
+    <section id="depoimentos" class="py-24 bg-gradient-to-br from-offWhite via-gold-light/10 to-roseGold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-gold font-semibold uppercase tracking-widest text-xs"

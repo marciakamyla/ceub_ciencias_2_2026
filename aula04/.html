@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Virtual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🎒 Escola Virtual</h1>
+    <h2>Formulário de Pré-Matrícula</h2>
+
+    <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <div class="campo-grupo">
+                <div class="campo">
+                    <label for="nome">Nome do Aluno</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="campo-grupo">
+                <div class="campo">
+                    <label for="mae">Nome da Mãe</label>
+                    <input type="text" id="mae" name="mae" required>
+                </div>
+
+                <div class="campo">
+                    <label for="pai">Nome do Pai</label>
+                    <input type="text" id="pai" name="pai">
+                </div>
+            </div>
+
+            <div class="campo-grupo">
+                <div class="campo">
+                    <label for="nascimento">Data de Nascimento</label>
+                    <input type="date" id="nascimento" name="nascimento" required>
+                </div>
+
+                <div class="campo">
+                    <label for="idade">Idade</label>
+                    <input type="number" id="idade" name="idade" readonly>
+                </div>
+            </div>
+
+            <div class="campo-grupo">
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" name="telefone" maxlength="13" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" maxlength="14" required>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" name="cep" maxlength="9" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados da Matrícula</legend>
+
+            <table>
+                <tr>
+                    <td>
+                        <b>Série</b>
+                        <select id="serie" name="serie" required>
+                            <option value="">Selecione</option>
+                            <option value="1ano">1º Ano</option>
+                            <option value="2ano">2º Ano</option>
+                            <option value="3ano">3º Ano</option>
+                            <option value="4ano">4º Ano</option>
+                            <option value="5ano">5º Ano</option>
+                            <option value="6ano">6º Ano</option>
+                            <option value="7ano">7º Ano</option>
+                            <option value="8ano">8º Ano</option>
+                            <option value="9ano">9º Ano</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <b>Turno</b>
+                        <input type="radio" name="turno" id="manha" value="manha">
+                        <label for="manha">Manhã</label>
+
+                        <input type="radio" name="turno" id="tarde" value="tarde">
+                        <label for="tarde">Tarde</label>
+
+                        <input type="radio" name="turno" id="noite" value="noite">
+                        <label for="noite">Noite</label>
+                    </td>
+
+                    <td>
+                        <b>Atividades Extracurriculares</b>
+                        <input type="checkbox" name="atividades" id="esporte" value="esporte">
+                        <label for="esporte">Esporte</label>
+
+                        <input type="checkbox" name="atividades" id="musica" value="musica">
+                        <label for="musica">Música</label>
+
+                        <input type="checkbox" name="atividades" id="teatro" value="teatro">
+                        <label for="teatro">Teatro</label>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="campo2">
+                <label for="ingles">Segunda Língua</label>
+                <input type="radio" name="lingua" id="ingles" value="ingles">
+                <label for="ingles">Inglês</label>
+
+                <input type="radio" name="lingua" id="espanhol" value="espanhol">
+                <label for="espanhol">Espanhol</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Endereço</legend>
+
+            <div class="campo-grupo">
+                <div class="campo">
+                    <label for="logradouro">Logradouro</label>
+                    <input type="text" id="logradouro" name="logradouro" readonly>
+                </div>
+
+                <div class="campo">
+                    <label for="numero">Número</label>
+                    <input type="number" id="numero" name="numero">
+                </div>
+
+                <div class="campo">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" id="complemento" name="complemento" placeholder="Apto, Bloco...">
+                </div>
+
+                <div class="campo">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" name="bairro" readonly>
+                </div>
+            </div>
+
+            <div class="campo-grupo2">
+                <div class="campo">
+                    <label for="estado">Estado</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Carregando estados...</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <select id="cidade" name="cidade" required disabled>
+                        <option value="">Selecione primeiro o Estado</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="ibge">Código IBGE</label>
+                    <input type="text" id="ibge" name="ibge" readonly>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="botoes">
+            <button type="submit">Enviar Matrícula</button>
+            <button type="reset">Limpar</button>
+        </div>
+    </form>
+
+    <script>
+        const campoNascimento=document.getElementById('nascimento');
+        const campoIdade=document.getElementById('idade');
+
+        campoNascimento.addEventListener('change',function(){
+            const dataNascimento=new Date(this.value);
+            const hoje=new Date();
+
+            let idade=hoje.getFullYear()-dataNascimento.getFullYear();
+
+            const mesAtual=hoje.getMonth();
+            const mesNascimento=dataNascimento.getMonth();
+            const diaAtual=hoje.getDate();
+            const diaNascimento=dataNascimento.getDate();
+
+            if(mesAtual<mesNascimento||(mesAtual===mesNascimento&&diaAtual<diaNascimento)){
+                idade--;
+            }
+
+            campoIdade.value=idade;
+        });
+
+        const campoCEP=document.getElementById('cep');
+
+        campoCEP.addEventListener('input',function(){
+            let valor=this.value.replace(/\D/g,'');
+            valor=valor.slice(0,8);
+
+            if(valor.length>5){
+                valor=valor.slice(0,5)+'-'+valor.slice(5);
+            }
+
+            this.value=valor;
+        });
+
+        const campoCPF=document.getElementById('cpf');
+
+        campoCPF.addEventListener('input',function(){
+            let valor=this.value.replace(/\D/g,'');
+            valor=valor.slice(0,11);
+
+            if(valor.length>9){
+                valor=valor.slice(0,3)+'.'+valor.slice(3,6)+'.'+valor.slice(6,9)+'-'+valor.slice(9);
+            }else if(valor.length>6){
+                valor=valor.slice(0,3)+'.'+valor.slice(3,6)+'.'+valor.slice(6);
+            }else if(valor.length>3){
+                valor=valor.slice(0,3)+'.'+valor.slice(3);
+            }
+
+            this.value=valor;
+        });
+
+        const campoTelefone=document.getElementById('telefone');
+
+        campoTelefone.addEventListener('input',function(){
+            let valor=this.value.replace(/\D/g,'');
+            valor=valor.slice(0,11);
+
+            if(valor.length>10){
+                valor='('+valor.slice(0,2)+') '+valor.slice(2,7)+'-'+valor.slice(7);
+            }else if(valor.length>6){
+                valor='('+valor.slice(0,2)+') '+valor.slice(2,6)+'-'+valor.slice(6);
+            }else if(valor.length>2){
+                valor='('+valor.slice(0,2)+') '+valor.slice(2);
+            }
+
+            this.value=valor;
+        });
+
+        const estado=document.getElementById('estado');
+        const cidade=document.getElementById('cidade');
+
+        fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
+        .then(resposta=>resposta.json())
+        .then(estados=>{
+            estado.innerHTML='<option value="">Selecione o Estado</option>';
+
+            estados.sort((a,b)=>a.nome.localeCompare(b.nome));
+
+            estados.forEach(item=>{
+                const option=document.createElement('option');
+                option.value=item.sigla;
+                option.textContent=item.nome;
+                estado.appendChild(option);
+            });
+        })
+        .catch(()=>{
+            estado.innerHTML='<option value="">Erro ao carregar estados</option>';
+        });
+
+        estado.addEventListener('change',function(){
+            const uf=this.value;
+
+            cidade.innerHTML='<option value="">Carregando cidades...</option>';
+            cidade.disabled=true;
+
+            if(!uf){
+                cidade.innerHTML='<option value="">Selecione primeiro o Estado</option>';
+                return;
+            }
+
+            fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf}/municipios`)
+            .then(resposta=>resposta.json())
+            .then(cidades=>{
+                cidade.innerHTML='<option value="">Selecione a Cidade</option>';
+
+                cidades.sort((a,b)=>a.nome.localeCompare(b.nome));
+
+                cidades.forEach(item=>{
+                    const option=document.createElement('option');
+                    option.value=item.id;
+                    option.textContent=item.nome;
+                    cidade.appendChild(option);
+                });
+
+                cidade.disabled=false;
+            })
+            .catch(()=>{
+                cidade.innerHTML='<option value="">Erro ao carregar cidades</option>';
+            });
+        });
+
+        campoCEP.addEventListener('blur',function(){
+            const cep=this.value.replace(/\D/g,'');
+
+            if(cep.length!==8){
+                return;
+            }
+
+            fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then(resposta=>resposta.json())
+            .then(dados=>{
+                if(dados.erro){
+                    alert('CEP não encontrado.');
+                    return;
+                }
+
+                document.getElementById('logradouro').value=dados.logradouro||'';
+                document.getElementById('bairro').value=dados.bairro||'';
+                document.getElementById('ibge').value=dados.ibge||'';
+
+                estado.value=dados.uf;
+
+                estado.dispatchEvent(new Event('change'));
+
+                setTimeout(()=>{
+                    cidade.value=dados.ibge||'';
+                },500);
+            })
+            .catch(()=>{
+                alert('Não foi possível consultar o CEP.');
+            });
+        });
+    </script>
+</body>
+</html>

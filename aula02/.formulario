@@ -1,0 +1,73 @@
+<html>
+    <title>Escola Virtual</title>
+<body>
+    <h1>Formulário de Pré-Matrícula</h1>
+    <form action="paginaDestina" method="post">
+        <fieldset>
+            <legend>Dados Pessoais:</legend>
+            <div>
+                <label for="">Nome do Aluno:</label>
+                <input type="text" name="txtNomeAluno" id="txtNomeAluno">
+            </div>
+            <div>
+                <label for="">Nascimento (dd/mm/aaaa):</label>
+                <input type="date" name="txtNascimento" id="txtNascimento"><br>
+            </div>
+            <div>
+                <label for="">Nome da Mãe:</label>
+                <input type="text" name="txtNomeMae" id="txtNomeMae">
+            </div>
+            <div>
+                <label for="">Nome do Pai:</label>
+                <input type="text" name="txtNomePai" id="txtNomePai">
+            </div>
+            <div>
+                <label for="">Telefone:DDD</label>
+                <input type="text" name="txtTelefoneDDD" id="txtTelefoneDDD">
+                <label for="">Telefone:</label>
+                <input type="text" name="txtTelefone" id="txtTelefone">
+                <label for="">Ramal</label>
+                <input type="text" name="txtRamal" id="txtRamal">
+            </div>
+            <div>
+                <label for="">Email:</label>
+                <input type="text" name="txtEmail" id="txtEmail">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Informações de Matrícula:</legend>
+            <div>
+                <label for="">Série</label>
+                <select name="cboSerie" id="cboSerie">
+                    <option value="1">Pré-Escolar</option>
+                    <option value="2">Ensino Fundamental 1</option>
+                    <option value="3">Ensino Fundamental 2</option>
+                    <option value="4">Ensino Médio</option>
+                </select>
+            </div>
+            <div>
+                <label for="">Turno</label>
+                <input type="radio" name="rdTurno" id="rdTurno" value="1"> Manhã
+                <input type="radio" name="rdTurno" id="rdTurno" value="2"> Tarde
+            </div>
+            <div>
+                <label for="">Atividades Extracurriculares</label><br>
+                <input type="checkbox" name="cbAtividades" id="cbAtividades" value="1">Informática
+                <input type="checkbox" name="cbAtividades" id="cbAtividades" value="1">Música
+                <input type="checkbox" name="cbAtividades" id="cbAtividades" value="1">Ballet
+                <input type="checkbox" name="cbAtividades" id="cbAtividades" value="1">Pintura
+                <input type="checkbox" name="cbAtividades" id="cbAtividades" value="1">Judô
+                <input type="checkbox" name="cbAtividades" id="cbAtividades" value="1">Futebol
+            </div>
+        </fieldset>
+        <button type="submit">Enviar Formulário</button>
+        <button type="reset">Limpar Campos</button>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
