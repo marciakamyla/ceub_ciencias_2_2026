@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta
+        name="description"
+        content="Animais encontrados">
+
+    <meta
+        name="author"
+        content="CEUB">
+
+    <title>CEUB - Animais Encontrados</title>
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        href="vendor/fontawesome-free/css/all.min.css"
+        rel="stylesheet"
+        type="text/css">
+
+
+    <!-- FONTE -->
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,600,700,800,900"
+        rel="stylesheet">
+
+
+    <!-- SB ADMIN -->
+
+    <link
+        href="css/sb-admin-2.css"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* SIDEBAR */
+
+        #accordionSidebar {
+
+            background-color: #662C92 !important;
+
+            background-image:
+                linear-gradient(
+                    180deg,
+                    #662C92 0%,
+                    #43054E 100%
+                ) !important;
+
+        }
+
+
+        /* BOTÕES */
+
+        .btn-ceub {
+
+            background-color: #662C92;
+
+            border-color: #662C92;
+
+            color: #ffffff;
+
+        }
+
+
+        .btn-ceub:hover {
+
+            background-color: #43054E;
+
+            border-color: #43054E;
+
+            color: #ffffff;
+
+        }
+
+
+        /* TÍTULO */
+
+        .card-header-ceub {
+
+            color: #662C92;
+
+        }
+
+
+        /* FOTO */
+
+        .pet-photo {
+
+            width: 55px;
+
+            height: 55px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+
+        }
+
+
+        /* STATUS ENCONTRADO */
+
+        .status-encontrado {
+
+            background-color: #28a745;
+
+            color: #ffffff;
+
+            padding: 5px 10px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+        }
+
+
+        /* STATUS PENDENTE */
+
+        .status-pendente {
+
+            background-color: #ffc107;
+
+            color: #212529;
+
+            padding: 5px 10px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+        }
+
+    </style>
+
+</head>
+
+
+<body id="page-top">
+
+
+<div id="wrapper">
+
+
+    <!-- ================================================= -->
+    <!-- SIDEBAR -->
+    <!-- ================================================= -->
+
+    <ul
+        class="navbar-nav sidebar sidebar-dark accordion"
+        id="accordionSidebar">
+
+
+        <!-- LOGO -->
+
+        <a
+            class="sidebar-brand d-flex align-items-center justify-content-center"
+            href="index_limpo.html">
+
+
+            <div class="sidebar-brand-icon">
+
+
+                <img
+                    src="https://institucional.uniceub.br/hubfs/BrandCenter/img/logo-ceub-assinatura-conceito-centralizado-01.png"
+                    width="100"
+                    height="80"
+                    alt="Logo CEUB">
+
+
+            </div>
+
+
+        </a>
+
+
+        <hr class="sidebar-divider my-0">
+
+
+        <!-- INÍCIO -->
+
+        <li class="nav-item">
+
+
+            <a
+                class="nav-link"
+                href="index_limpo.html">
+
+
+                <i class="fas fa-fw fa-home"></i>
+
+
+                <span>
+                    Início
+                </span>
+
+
+            </a>
+
+
+        </li>
+
+
+        <hr class="sidebar-divider">
+
+
+        <!-- SISTEMA -->
+
+        <div class="sidebar-heading">
+
+            Sistema
+
+        </div>
+
+
+        <!-- PETS -->
+
+        <li class="nav-item active">
+
+
+            <a
+                class="nav-link"
+                href="#"
+                data-toggle="collapse"
+                data-target="#collapsePets"
+                aria-expanded="true"
+                aria-controls="collapsePets">
+
+
+                <i class="fas fa-fw fa-paw"></i>
+
+
+                <span>
+                    Pets
+                </span>
+
+
+            </a>
+
+
+            <div
+                id="collapsePets"
+                class="collapse show"
+                data-parent="#accordionSidebar">
+
+
+                <div class="bg-white py-2 collapse-inner rounded">
+
+
+                    <h6 class="collapse-header">
+
+                        Animais:
+
+                    </h6>
+
+
+                    <!-- IMPORTANTE:
+                         CADASTRO VAI PARA index_limpo.html -->
+
+                    <a
+                        class="collapse-item"
+                        href="index_limpo.html">
+
+                        Cadastrar Pet
+
+                    </a>
+
+
+                    <!-- PÁGINA ATUAL -->
+
+                    <a
+                        class="collapse-item active"
+                        href="animais-encontrados.html">
+
+                        Animais Encontrados
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </li>
+
+
+        <hr class="sidebar-divider">
+
+
+        <!-- INFORMAÇÕES -->
+
+        <li class="nav-item">
+
+
+            <a
+                class="nav-link"
+                href="javascript:void(0);">
+
+
+                <i class="fas fa-fw fa-info-circle"></i>
+
+
+                <span>
+                    Informações
+                </span>
+
+
+            </a>
+
+
+        </li>
+
+
+        <hr class="sidebar-divider d-none d-md-block">
+
+
+        <div class="text-center d-none d-md-inline">
+
+
+            <button
+                class="rounded-circle border-0"
+                id="sidebarToggle">
+
+            </button>
+
+
+        </div>
+
+
+    </ul>
+
+
+    <!-- ================================================= -->
+    <!-- FIM SIDEBAR -->
+    <!-- ================================================= -->
+
+
+    <div
+        id="content-wrapper"
+        class="d-flex flex-column">
+
+
+        <div id="content">
+
+
+            <!-- ================================================= -->
+            <!-- TOPBAR -->
+            <!-- ================================================= -->
+
+            <nav
+                class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+
+                <button
+                    id="sidebarToggleTop"
+                    class="btn btn-link d-md-none rounded-circle mr-3">
+
+
+                    <i class="fa fa-bars"></i>
+
+
+                </button>
+
+
+                <!-- PESQUISA -->
+
+                <form
+                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+
+
+                    <div class="input-group">
+
+
+                        <input
+                            type="text"
+                            class="form-control bg-light border-0 small"
+                            placeholder="Pesquisar animal..."
+                            id="campoPesquisa">
+
+
+                        <div class="input-group-append">
+
+
+                            <button
+                                class="btn btn-ceub"
+                                type="button">
+
+
+                                <i class="fas fa-search fa-sm"></i>
+
+
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </form>
+
+
+                <!-- USUÁRIO -->
+
+                <ul class="navbar-nav ml-auto">
+
+
+                    <li class="nav-item dropdown no-arrow">
+
+
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="userDropdown"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+
+
+                            <span
+                                class="mr-2 d-none d-lg-inline text-gray-600 small">
+
+                                Usuário
+
+                            </span>
+
+
+                            <img
+                                class="img-profile rounded-circle"
+                                src="img/undraw_profile.svg">
+
+
+                        </a>
+
+
+                        <div
+                            class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            aria-labelledby="userDropdown">
+
+
+                            <a
+                                class="dropdown-item"
+                                href="javascript:void(0);">
+
+
+                                <i
+                                    class="fas fa-user fa-sm fa-fw mr-2 text-gray-400">
+                                </i>
+
+
+                                Perfil
+
+
+                            </a>
+
+
+                            <a
+                                class="dropdown-item"
+                                href="javascript:void(0);">
+
+
+                                <i
+                                    class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400">
+                                </i>
+
+
+                                Configurações
+
+
+                            </a>
+
+
+                            <div class="dropdown-divider"></div>
+
+
+                            <a
+                                class="dropdown-item"
+                                href="javascript:void(0);"
+                                data-toggle="modal"
+                                data-target="#logoutModal">
+
+
+                                <i
+                                    class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400">
+                                </i>
+
+
+                                Sair
+
+
+                            </a>
+
+
+                        </div>
+
+
+                    </li>
+
+
+                </ul>
+
+
+            </nav>
+
+
+            <!-- ================================================= -->
+            <!-- CONTEÚDO -->
+            <!-- ================================================= -->
+
+            <div class="container-fluid">
+
+
+                <!-- TÍTULO -->
+
+                <div
+                    class="d-sm-flex align-items-center justify-content-between mb-4">
+
+
+                    <h1
+                        class="h3 mb-0 text-gray-800">
+
+                        Animais Encontrados
+
+                    </h1>
+
+
+                    <!-- IMPORTANTE:
+                         VOLTA PARA index_limpo.html -->
+
+                    <a
+                        href="./index_limpo.html"
+                        class="btn btn-ceub">
+
+
+                        <i class="fas fa-plus"></i>
+
+
+                        Cadastrar Pet
+
+
+                    </a>
+
+
+                </div>
+
+
+                <!-- ================================================= -->
+                <!-- TABELA -->
+                <!-- ================================================= -->
+
+                <div class="card shadow mb-4">
+
+
+                    <div class="card-header py-3">
+
+
+                        <h6
+                            class="m-0 font-weight-bold card-header-ceub">
+
+
+                            <i class="fas fa-paw mr-2"></i>
+
+
+                            Animais encontrados
+
+
+                        </h6>
+
+
+                    </div>
+
+
+                    <div class="card-body">
+
+
+                        <div class="table-responsive">
+
+
+                            <table
+                                class="table table-bordered"
+                                id="tabelaAnimais"
+                                width="100%"
+                                cellspacing="0">
+
+
+                                <thead>
+
+
+                                    <tr>
+
+
+                                        <th>Foto</th>
+
+                                        <th>Nome</th>
+
+                                        <th>Espécie</th>
+
+                                        <th>Raça</th>
+
+                                        <th>Sexo</th>
+
+                                        <th>Local encontrado</th>
+
+                                        <th>Data</th>
+
+                                        <th>Status</th>
+
+                                        <th>Ação</th>
+
+
+                                    </tr>
+
+
+                                </thead>
+
+
+                                <tbody>
+
+
+                                    <!-- REX -->
+
+                                    <tr>
+
+
+                                        <td>
+
+
+                                            <img
+                                                src="img/undraw_profile.svg"
+                                                class="pet-photo"
+                                                alt="Foto do animal">
+
+
+                                        </td>
+
+
+                                        <td>
+                                            Rex
+                                        </td>
+
+
+                                        <td>
+                                            Cachorro
+                                        </td>
+
+
+                                        <td>
+                                            Golden Retriever
+                                        </td>
+
+
+                                        <td>
+                                            Macho
+                                        </td>
+
+
+                                        <td>
+                                            Asa Norte
+                                        </td>
+
+
+                                        <td>
+                                            22/09/2026
+                                        </td>
+
+
+                                        <td>
+
+
+                                            <span
+                                                class="status-encontrado">
+
+                                                Encontrado
+
+                                            </span>
+
+
+                                        </td>
+
+
+                                        <td>
+
+
+                                            <button
+                                                class="btn btn-sm btn-ceub"
+                                                onclick="verDetalhes('Rex')">
+
+
+                                                <i class="fas fa-eye"></i>
+
+
+                                                Ver
+
+
+                                            </button>
+
+
+                                        </td>
+
+
+                                    </tr>
+
+
+                                    <!-- MIMI -->
+
+                                    <tr>
+
+
+                                        <td>
+
+
+                                            <img
+                                                src="img/undraw_profile.svg"
+                                                class="pet-photo"
+                                                alt="Foto do animal">
+
+
+                                        </td>
+
+
+                                        <td>
+                                            Mimi
+                                        </td>
+
+
+                                        <td>
+                                            Gato
+                                        </td>
+
+
+                                        <td>
+                                            Siamês
+                                        </td>
+
+
+                                        <td>
+                                            Fêmea
+                                        </td>
+
+
+                                        <td>
+                                            Taguatinga
+                                        </td>
+
+
+                                        <td>
+                                            23/09/2026
+                                        </td>
+
+
+                                        <td>
+
+
+                                            <span
+                                                class="status-encontrado">
+
+                                                Encontrado
+
+                                            </span>
+
+
+                                        </td>
+
+
+                                        <td>
+
+
+                                            <button
+                                                class="btn btn-sm btn-ceub"
+                                                onclick="verDetalhes('Mimi')">
+
+
+                                                <i class="fas fa-eye"></i>
+
+
+                                                Ver
+
+
+                                            </button>
+
+
+                                        </td>
+
+
+                                    </tr>
+
+
+                                    <!-- THOR -->
+
+                                    <tr>
+
+
+                                        <td>
+
+
+                                            <img
+                                                src="img/undraw_profile.svg"
+                                                class="pet-photo"
+                                                alt="Foto do animal">
+
+
+                                        </td>
+
+
+                                        <td>
+                                            Thor
+                                        </td>
+
+
+                                        <td>
+                                            Cachorro
+                                        </td>
+
+
+                                        <td>
+                                            SRD
+                                        </td>
+
+
+                                        <td>
+                                            Macho
+                                        </td>
+
+
+                                        <td>
+                                            Asa Sul
+                                        </td>
+
+
+                                        <td>
+                                            24/09/2026
+                                        </td>
+
+
+                                        <td>
+
+
+                                            <span
+                                                class="status-pendente">
+
+                                                Aguardando dono
+
+                                            </span>
+
+
+                                        </td>
+
+
+                                        <td>
+
+
+                                            <button
+                                                class="btn btn-sm btn-ceub"
+                                                onclick="verDetalhes('Thor')">
+
+
+                                                <i class="fas fa-eye"></i>
+
+
+                                                Ver
+
+
+                                            </button>
+
+
+                                        </td>
+
+
+                                    </tr>
+
+
+                                </tbody>
+
+
+                            </table>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- FOOTER -->
+        <!-- ================================================= -->
+
+        <footer class="sticky-footer bg-white">
+
+
+            <div class="container my-auto">
+
+
+                <div class="copyright text-center my-auto">
+
+
+                    <span>
+
+                        Copyright &copy; CEUB 2026
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </footer>
+
+
+    </div>
+
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- MODAL SAIR -->
+<!-- ================================================= -->
+
+<div
+    class="modal fade"
+    id="logoutModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="logoutModalLabel"
+    aria-hidden="true">
+
+
+    <div class="modal-dialog" role="document">
+
+
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+
+
+                <h5
+                    class="modal-title"
+                    id="logoutModalLabel">
+
+                    Pronto para Sair?
+
+                </h5>
+
+
+                <button
+                    class="close"
+                    type="button"
+                    data-dismiss="modal">
+
+
+                    <span aria-hidden="true">
+                        ×
+                    </span>
+
+
+                </button>
+
+
+            </div>
+
+
+            <div class="modal-body">
+
+                Deseja realmente sair?
+
+            </div>
+
+
+            <div class="modal-footer">
+
+
+                <button
+                    class="btn btn-secondary"
+                    type="button"
+                    data-dismiss="modal">
+
+                    Cancelar
+
+                </button>
+
+
+                <button
+                    class="btn btn-ceub"
+                    type="button"
+                    data-dismiss="modal">
+
+                    Sair
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="vendor/jquery/jquery.min.js"></script>
+
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/sb-admin-2.min.js"></script>
+
+
+<script>
+
+    /* VER DETALHES */
+
+    function verDetalhes(nome) {
+
+        alert("Detalhes do animal: " + nome);
+
+    }
+
+
+    /* PESQUISA DA TABELA */
+
+    document
+        .getElementById("campoPesquisa")
+        .addEventListener("keyup", function() {
+
+
+            const filtro =
+                this.value.toLowerCase();
+
+
+            const linhas =
+                document.querySelectorAll(
+                    "#tabelaAnimais tbody tr"
+                );
+
+
+            linhas.forEach(function(linha) {
+
+
+                const texto =
+                    linha.textContent.toLowerCase();
+
+
+                if (texto.includes(filtro)) {
+
+                    linha.style.display = "";
+
+                } else {
+
+                    linha.style.display = "none";
+
+                }
+
+
+            });
+
+
+        });
+
+</script>
+
+
+</body>
+
+</html>

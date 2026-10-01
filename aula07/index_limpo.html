@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Cadastro de animais desaparecidos">
+    <meta name="author" content="CEUB">
+
+    <title>CEUB - Cadastro de Animal Desaparecido</title>
+
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,600,700,800,900" rel="stylesheet">
+
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+
+    <style>
+        #accordionSidebar {
+            background-color: #662C92 !important;
+            background-image: linear-gradient(180deg, #662C92 0%, #43054E 100%) !important;
+        }
+
+        .btn-ceub {
+            background-color: #662C92;
+            border-color: #662C92;
+            color: white;
+        }
+
+        .btn-ceub:hover {
+            background-color: #43054E;
+            border-color: #43054E;
+            color: white;
+        }
+
+        .titulo-ceub {
+            color: #662C92;
+            font-weight: 700;
+        }
+
+        .secao-titulo {
+            color: #662C92;
+            font-weight: 700;
+            border-bottom: 2px solid #662C92;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .form-control:focus,
+        .form-control:active {
+            border-color: #662C92;
+            box-shadow: 0 0 0 0.2rem rgba(102, 44, 146, 0.15);
+        }
+
+        .required {
+            color: #dc3545;
+        }
+
+        .foto-preview {
+            width: 100%;
+            max-width: 250px;
+            height: 180px;
+            border: 2px dashed #662C92;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .foto-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+
+<div id="wrapper">
+
+    <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index_limpo.html">
+            <div class="sidebar-brand-icon">
+                <img
+                    src="https://institucional.uniceub.br/hubfs/BrandCenter/img/logo-ceub-assinatura-conceito-centralizado-01.png"
+                    width="100"
+                    height="80"
+                    alt="Logo CEUB">
+            </div>
+        </a>
+
+        <hr class="sidebar-divider my-0">
+
+        <li class="nav-item active">
+            <a class="nav-link" href="index_limpo.html">
+                <i class="fas fa-fw fa-home"></i>
+                <span>Início</span>
+            </a>
+        </li>
+
+        <hr class="sidebar-divider">
+
+        <div class="sidebar-heading">
+            Sistema
+        </div>
+
+        <li class="nav-item">
+
+            <a
+                class="nav-link collapsed"
+                href="#"
+                data-toggle="collapse"
+                data-target="#collapsePets"
+                aria-expanded="false"
+                aria-controls="collapsePets">
+
+                <i class="fas fa-fw fa-paw"></i>
+                <span>Pets</span>
+
+            </a>
+
+            <div id="collapsePets" class="collapse" data-parent="#accordionSidebar">
+
+                <div class="bg-white py-2 collapse-inner rounded">
+
+                    <h6 class="collapse-header">
+                        Animais:
+                    </h6>
+
+                    <a class="collapse-item active" href="index_limpo.html">
+                        Cadastrar Pet
+                    </a>
+
+                    <a class="collapse-item" href="animais-encontrados.html">
+                        Animais Encontrados
+                    </a>
+
+                </div>
+
+            </div>
+
+        </li>
+
+        <hr class="sidebar-divider">
+
+        <li class="nav-item">
+
+            <a class="nav-link" href="javascript:void(0);">
+
+                <i class="fas fa-fw fa-info-circle"></i>
+                <span>Informações</span>
+
+            </a>
+
+        </li>
+
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <div class="text-center d-none d-md-inline">
+
+            <button
+                class="rounded-circle border-0"
+                id="sidebarToggle">
+            </button>
+
+        </div>
+
+    </ul>
+
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <div id="content">
+
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                <button
+                    id="sidebarToggleTop"
+                    class="btn btn-link d-md-none rounded-circle mr-3">
+
+                    <i class="fa fa-bars"></i>
+
+                </button>
+
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+
+                    <div class="input-group">
+
+                        <input
+                            type="text"
+                            class="form-control bg-light border-0 small"
+                            placeholder="Pesquisar...">
+
+                        <div class="input-group-append">
+
+                            <button
+                                class="btn btn-ceub"
+                                type="button">
+
+                                <i class="fas fa-search fa-sm"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item dropdown no-arrow">
+
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="userDropdown"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                Usuário
+                            </span>
+
+                            <img
+                                class="img-profile rounded-circle"
+                                src="img/undraw_profile.svg">
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="container-fluid">
+
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+
+                    <h1 class="h3 mb-0 text-gray-800">
+                        Cadastro de Animal Desaparecido
+                    </h1>
+
+                    <a
+                        href="animais-encontrados.html"
+                        class="btn btn-ceub">
+
+                        <i class="fas fa-paw"></i>
+                        Animais Encontrados
+
+                    </a>
+
+                </div>
+
+                <div class="card shadow mb-4">
+
+                    <div class="card-header py-3">
+
+                        <h6 class="m-0 font-weight-bold titulo-ceub">
+
+                            <i class="fas fa-paw mr-2"></i>
+                            Cadastro de animal desaparecido
+
+                        </h6>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <form id="formCadastroPet">
+
+                            <h5 class="secao-titulo">
+
+                                <i class="fas fa-dog mr-2"></i>
+                                Dados do Pet
+
+                            </h5>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="nome">
+                                        Nome do Pet
+                                        <span class="required">*</span>
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="nome"
+                                        name="nome"
+                                        placeholder="Ex.: Rex"
+                                        required>
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="especie">
+                                        Espécie
+                                        <span class="required">*</span>
+                                    </label>
+
+                                    <select
+                                        class="form-control"
+                                        id="especie"
+                                        name="especie"
+                                        required>
+
+                                        <option value="">Selecione</option>
+                                        <option value="Cachorro">Cachorro</option>
+                                        <option value="Gato">Gato</option>
+                                        <option value="Ave">Ave</option>
+                                        <option value="Outro">Outro</option>
+
+                                    </select>
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="raca">
+                                        Raça
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="raca"
+                                        name="raca"
+                                        placeholder="Ex.: Golden Retriever">
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="sexo">
+                                        Sexo
+                                        <span class="required">*</span>
+                                    </label>
+
+                                    <select
+                                        class="form-control"
+                                        id="sexo"
+                                        name="sexo"
+                                        required>
+
+                                        <option value="">Selecione</option>
+                                        <option value="Macho">Macho</option>
+                                        <option value="Fêmea">Fêmea</option>
+
+                                    </select>
+
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+
+                                    <label for="idade">
+                                        Idade
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="idade"
+                                        name="idade"
+                                        min="0"
+                                        placeholder="Ex.: 3">
+
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+
+                                    <label for="cor">
+                                        Cor / Pelagem
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="cor"
+                                        name="cor"
+                                        placeholder="Ex.: Caramelo">
+
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+
+                                    <label for="porte">
+                                        Porte
+                                    </label>
+
+                                    <select
+                                        class="form-control"
+                                        id="porte"
+                                        name="porte">
+
+                                        <option value="">Selecione</option>
+                                        <option value="Pequeno">Pequeno</option>
+                                        <option value="Médio">Médio</option>
+                                        <option value="Grande">Grande</option>
+
+                                    </select>
+
+                                </div>
+
+                                <div class="col-md-12 mb-4">
+
+                                    <label for="foto">
+                                        Foto do Animal
+                                    </label>
+
+                                    <input
+                                        type="file"
+                                        class="form-control"
+                                        id="foto"
+                                        name="foto"
+                                        accept="image/*">
+
+                                    <div
+                                        class="foto-preview"
+                                        id="fotoPreview">
+
+                                        <span>
+                                            <i class="fas fa-camera mr-2"></i>
+                                            Pré-visualização da foto
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <h5 class="secao-titulo mt-3">
+
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                Informações do Desaparecimento
+
+                            </h5>
+
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+
+                                    <label for="dataDesaparecimento">
+                                        Data do desaparecimento
+                                        <span class="required">*</span>
+                                    </label>
+
+                                    <input
+                                        type="date"
+                                        class="form-control"
+                                        id="dataDesaparecimento"
+                                        name="dataDesaparecimento"
+                                        required>
+
+                                </div>
+
+                                <div class="col-md-8 mb-3">
+
+                                    <label for="localDesaparecimento">
+                                        Local do desaparecimento
+                                        <span class="required">*</span>
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="localDesaparecimento"
+                                        name="localDesaparecimento"
+                                        placeholder="Ex.: Avenida W3 Norte"
+                                        required>
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="bairro">
+                                        Bairro
+                                        <span class="required">*</span>
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="bairro"
+                                        name="bairro"
+                                        placeholder="Ex.: Asa Norte"
+                                        required>
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="cidade">
+                                        Cidade
+                                        <span class="required">*</span>
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="cidade"
+                                        name="cidade"
+                                        placeholder="Ex.: Brasília"
+                                        required>
+
+                                </div>
+
+                                <div class="col-md-12 mb-3">
+
+                                    <label for="observacoes">
+                                        Características / Observações
+                                    </label>
+
+                                    <textarea
+                                        class="form-control"
+                                        id="observacoes"
+                                        name="observacoes"
+                                        rows="4"
+                                        placeholder="Informe características que possam ajudar na identificação do animal..."></textarea>
+
+                                </div>
+
+                            </div>
+
+                            <h5 class="secao-titulo mt-3">
+
+                                <i class="fas fa-user mr-2"></i>
+                                Dados do Responsável
+
+                            </h5>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="responsavel">
+                                        Nome do responsável
+                                        <span class="required">*</span>
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="responsavel"
+                                        name="responsavel"
+                                        placeholder="Nome completo"
+                                        required>
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label for="telefone">
+                                        Telefone / WhatsApp
+                                        <span class="required">*</span>
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        class="form-control"
+                                        id="telefone"
+                                        name="telefone"
+                                        placeholder="(61) 99999-9999"
+                                        required>
+
+                                </div>
+
+                                <div class="col-md-12 mb-3">
+
+                                    <label for="email">
+                                        E-mail
+                                        <span class="required">*</span>
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        name="email"
+                                        placeholder="nome@exemplo.com"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+                            <div class="mt-4">
+
+                                <button
+                                    type="reset"
+                                    class="btn btn-secondary">
+
+                                    <i class="fas fa-eraser"></i>
+                                    Limpar
+
+                                </button>
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-ceub">
+
+                                    <i class="fas fa-save"></i>
+                                    Cadastrar Pet
+
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer class="sticky-footer bg-white">
+
+            <div class="container my-auto">
+
+                <div class="copyright text-center my-auto">
+
+                    <span>
+                        Copyright &copy; CEUB 2026
+                    </span>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+</div>
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/sb-admin-2.min.js"></script>
+
+<script>
+
+    document
+        .getElementById("foto")
+        .addEventListener("change", function(event) {
+
+            const arquivo = event.target.files[0];
+            const preview = document.getElementById("fotoPreview");
+
+            if (arquivo) {
+
+                const leitor = new FileReader();
+
+                leitor.onload = function(e) {
+
+                    preview.innerHTML =
+                        '<img src="' +
+                        e.target.result +
+                        '" alt="Foto do animal">';
+
+                };
+
+                leitor.readAsDataURL(arquivo);
+
+            } else {
+
+                preview.innerHTML =
+                    '<span>' +
+                    '<i class="fas fa-camera mr-2"></i>' +
+                    'Pré-visualização da foto' +
+                    '</span>';
+
+            }
+
+        });
+
+
+    document
+        .getElementById("formCadastroPet")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            alert(
+                "Cadastro do animal desaparecido realizado com sucesso!"
+            );
+
+        });
+
+</script>
+
+</body>
+
+</html>
