@@ -1,9 +1,12 @@
+
 services:
   site-html:
     image: nginx:alpine
-    container_name: site-html
     ports:
       - "8088:80"
     volumes:
-      - ./:/usr/share/nginx/html:ro
+      - site_html:/usr/share/nginx/html
     restart: unless-stopped
+
+volumes:
+  site_html:
