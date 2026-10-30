@@ -1,12 +1,12 @@
 
+
 services:
   site-html:
     image: nginx:alpine
     ports:
       - "8088:80"
-    volumes:
-      - site_html:/usr/share/nginx/html
+    command: >
+      sh -c "wget -O /usr/share/nginx/html/index.html
+      https://raw.githubusercontent.com/marciakamyla/ceub_ciencias_2_2026/desenvolvimento/aula01/.html
+      && nginx -g 'daemon off;'"
     restart: unless-stopped
-
-volumes:
-  site_html:
